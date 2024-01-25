@@ -22,10 +22,12 @@ def summarize_poem(poem):
     return summary
 
 def main():
+    hide_default_st_css = "<style>.st-emotion-cache-zq5wmm ezrtsby0, .viewerBadge_container__r5tak { display:none!important }"
+    st.markdown(hide_default_st_css, unsafe_allow_html=True)
     st.title("Poem Summarizer")
 
     # User input: Poem text
-    poem_text = st.text_area("Enter the Poem:")
+    poem_text = st.text_area("Enter a Poem/Verse:")
 
     # Generate button
     if st.button("Generate Summary"):
@@ -34,7 +36,7 @@ def main():
             poem_summary = summarize_poem(poem_text)
 
             # Display the summary
-            st.subheader("Simplified Poem Summary:")
+            st.subheader("Simplified Poem/Verse Summary:")
             st.write(poem_summary.content)
         else:
             st.warning("Please enter a poem before generating a summary.")
