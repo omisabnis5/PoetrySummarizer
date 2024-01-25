@@ -22,7 +22,7 @@ def summarize_poem(poem):
     return summary
 
 def main():
-    hide_default_st_css = "<style>.st-emotion-cache-zq5wmm, .viewerBadge_container__r5tak { display:none!important }"
+    hide_default_st_css = "<style>.st-emotion-cache-zq5wmm .viewerBadge_container__r5tak { display:none!important }"
     st.markdown(hide_default_st_css, unsafe_allow_html=True)
     st.title("Poem Summarizer")
 
